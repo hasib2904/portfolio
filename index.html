@@ -211,35 +211,6 @@
 
 <body>
 
- <!-- ===================================================== -->
-<!-- PREMIUM FLOATING NAVBAR -->
-<!-- ===================================================== -->
-
-<header id="navbar"
-        class="fixed top-5 left-1/2
-               -translate-x-1/2
-               z-50
-               w-full
-               transition-all duration-500">
-
-  <!-- CONTAINER -->
-  <div id="navbarContainer"
-       class="max-w-5xl mx-auto px-6
-              transition-all duration-500">
-
-
-
-
-    <!-- NAVBAR -->
-    <nav id="navbarInner"
-         class="bg-gray-900/85 backdrop-blur-xl
-                border border-white/10
-                rounded-2xl
-                px-8 py-4
-                flex items-center justify-between
-                transition-all duration-500">
-
-
 
 
       <!-- ===================================================== -->
@@ -420,82 +391,205 @@
 
 
 <!-- ===================================================== -->
-<!-- NAVBAR SCROLL SCRIPT -->
+<!-- PREMIUM RESPONSIVE NAVBAR -->
+<!-- ===================================================== -->
+
+<header id="navbar"
+        class="fixed top-4 left-1/2
+               -translate-x-1/2
+               z-50
+               w-full
+               px-4
+               transition-all duration-500">
+
+
+
+
+  <!-- CONTAINER -->
+  <div class="max-w-6xl mx-auto">
+
+
+
+
+    <!-- NAV -->
+    <nav id="navbarInner"
+
+         class="bg-gray-900/85 backdrop-blur-xl
+
+                border border-white/10
+
+                rounded-3xl
+
+                px-5 py-4
+
+                transition-all duration-500">
+
+
+
+
+      <!-- TOP -->
+      <div class="flex items-center justify-between">
+
+
+
+
+        <!-- PROFILE -->
+        <a href="#home"
+           class="flex items-center gap-3 shrink-0">
+
+          <img src="profile.jpg"
+               alt="Hasibul Hossain"
+
+               class="w-12 h-12 rounded-full
+                      object-cover
+                      border border-white/10">
+
+          <span class="text-white font-semibold
+                       hidden sm:block">
+
+            Hasibul Hossain
+
+          </span>
+
+        </a>
+
+
+
+
+
+
+
+
+
+
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex
+                   items-center gap-8
+                   text-[16px] font-medium">
+
+          <li><a href="#home" class="hover:text-teal-400 transition">Home</a></li>
+
+          <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+
+          <li><a href="#education" class="hover:text-teal-400 transition">Education</a></li>
+
+          <li><a href="#skills" class="hover:text-teal-400 transition">Skills</a></li>
+
+          <li><a href="#experience" class="hover:text-teal-400 transition">Experience</a></li>
+
+          <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+
+          <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+
+          <li><a href="#resume" class="hover:text-teal-400 transition">Resume</a></li>
+
+        </ul>
+
+
+
+
+
+
+
+
+
+
+        <!-- MOBILE BUTTON -->
+        <button id="menuBtn"
+
+                class="lg:hidden
+
+                       text-white text-2xl">
+
+          ☰
+
+        </button>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu"
+
+           class="hidden lg:hidden
+                  pt-5">
+
+        <ul class="flex flex-col gap-5
+                   text-center font-medium">
+
+          <li><a href="#home" class="block hover:text-teal-400 transition">Home</a></li>
+
+          <li><a href="#about" class="block hover:text-teal-400 transition">About</a></li>
+
+          <li><a href="#education" class="block hover:text-teal-400 transition">Education</a></li>
+
+          <li><a href="#skills" class="block hover:text-teal-400 transition">Skills</a></li>
+
+          <li><a href="#experience" class="block hover:text-teal-400 transition">Experience</a></li>
+
+          <li><a href="#projects" class="block hover:text-teal-400 transition">Projects</a></li>
+
+          <li><a href="#contact" class="block hover:text-teal-400 transition">Contact</a></li>
+
+          <li><a href="#resume" class="block hover:text-teal-400 transition">Resume</a></li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- ===================================================== -->
+<!-- MOBILE MENU SCRIPT -->
 <!-- ===================================================== -->
 
 <script>
 
-  let lastScroll = 0;
+const menuBtn = document.getElementById("menuBtn");
 
-  const navbar = document.getElementById("navbar");
-
-  const navbarInner = document.getElementById("navbarInner");
+const mobileMenu = document.getElementById("mobileMenu");
 
 
 
-  window.addEventListener("scroll", () => {
+menuBtn.addEventListener("click", () => {
 
-    const currentScroll = window.pageYOffset;
+  mobileMenu.classList.toggle("hidden");
 
+});
 
-
-    // =============================
-    // SCROLL DOWN → MINIMIZE
-    // =============================
-
-    if (currentScroll > lastScroll && currentScroll > 80) {
-
-      navbar.style.top = "-120px";
-
-    }
-
-
-
-    // =============================
-    // SCROLL UP → SHOW AGAIN
-    // =============================
-
-    else {
-
-      navbar.style.top = "20px";
-
-    }
-
-
-
-    // =============================
-    // SMALLER AFTER SCROLL
-    // =============================
-
-    if (currentScroll > 50) {
-
-      navbarInner.classList.remove("px-8", "py-4");
-
-      navbarInner.classList.add("px-6", "py-3");
-
-    }
-
-    else {
-
-      navbarInner.classList.remove("px-6", "py-3");
-
-      navbarInner.classList.add("px-8", "py-4");
-
-    }
-
-
-
-    lastScroll = currentScroll;
-
-  });
 
 </script>
 
 
+
+
+
+
+
   <!-- ================= HERO SECTION ================= -->
 
-  <section id="home"
-           class="relative min-h-screen flex items-center overflow-hidden hero-bg">
+<section id="home"
+           class="relative min-h-screen flex items-center overflow-hidden hero-bg pt-44 md:pt-32">
 
     <!-- Grid -->
     <div class="absolute inset-0 hero-grid opacity-40"></div>
@@ -3670,5 +3764,114 @@ body.light #resume .bg-teal-500\/10 {
 
 }
 </style>
+<!-- MOBILE MENU SCRIPT -->
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+
+  mobileMenu.classList.toggle("hidden");
+
+});
+
+</script>
+
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  let lastScroll = 0;
+
+  const navbar = document.getElementById("navbar");
+
+
+
+  window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+
+
+    // =========================
+    // HIDE NAVBAR
+    // =========================
+
+    if(currentScroll > lastScroll && currentScroll > 120) {
+
+      navbar.style.transform =
+      "translateX(-50%) translateY(-140px)";
+
+    }
+
+
+
+    // =========================
+    // SHOW NAVBAR
+    // =========================
+
+    else {
+
+      navbar.style.transform =
+      "translateX(-50%) translateY(0)";
+
+    }
+
+
+
+    lastScroll = currentScroll;
+
+  });
+
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  let lastScroll = 0;
+
+  const navbar = document.getElementById("navbar");
+
+
+
+  window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+
+
+    // HIDE
+    if(currentScroll > lastScroll && currentScroll > 120) {
+
+      navbar.style.transform =
+      "translateX(-50%) translateY(-140px)";
+
+    }
+
+    // SHOW
+    else {
+
+      navbar.style.transform =
+      "translateX(-50%) translateY(0px)";
+
+    }
+
+
+
+    lastScroll = currentScroll;
+
+  });
+
+});
+
+</script>
 </body>
 </html>
