@@ -1,0 +1,3674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hasibul Hossain | Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+
+    :root{
+      --teal:#14b8a6;
+      --bg-primary:#020617;
+      --bg-secondary:#0f172a;
+      --text-primary:#ffffff;
+      --text-secondary:#cbd5e1;
+      --card-bg:rgba(255,255,255,0.05);
+      --border:rgba(255,255,255,0.08);
+    }
+
+    body.light-mode{
+      --bg-primary:#f8fafc;
+      --bg-secondary:#ffffff;
+      --text-primary:#0f172a;
+      --text-secondary:#475569;
+      --card-bg:rgba(255,255,255,0.9);
+      --border:rgba(15,23,42,0.08);
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--bg-primary);
+      color:var(--text-primary);
+      font-family:Arial, sans-serif;
+      overflow-x:hidden;
+      transition:0.4s ease;
+    }
+
+    /* NAV */
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    body.light-mode .glass{
+      background:rgba(255,255,255,0.75);
+      border:1px solid rgba(15,23,42,0.06);
+    }
+
+    /* HERO */
+
+    .hero-bg{
+      background:
+      radial-gradient(circle at top left,
+      rgba(20,184,166,0.15),
+      transparent 30%),
+
+      radial-gradient(circle at bottom right,
+      rgba(59,130,246,0.12),
+      transparent 30%);
+    }
+
+    .hero-grid{
+      background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size:70px 70px;
+    }
+
+    body.light-mode .hero-grid{
+      background-image:
+      linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px);
+    }
+
+    /* TYPEWRITER */
+
+    .typewriter-cursor::after{
+      content:"|";
+      margin-left:4px;
+      color:#2dd4bf;
+      animation:blink 1s infinite;
+    }
+
+    @keyframes blink{
+      50%{
+        opacity:0;
+      }
+    }
+
+    /* FLOATING IMAGE */
+
+    .floating-image{
+      animation:floating 5s ease-in-out infinite;
+    }
+
+    @keyframes floating{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-14px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* HERO ENTRANCE */
+
+    .fade-up{
+      animation:fadeUp 1.2s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0px);
+      }
+    }
+
+    /* CARDS */
+
+    .premium-card{
+      background:var(--card-bg);
+      border:1px solid var(--border);
+      backdrop-filter:blur(14px);
+      transition:0.4s ease;
+    }
+
+    .premium-card:hover{
+      transform:translateY(-8px);
+      border-color:rgba(20,184,166,0.5);
+      box-shadow:0 10px 40px rgba(20,184,166,0.08);
+    }
+
+    /* SECTION TITLE */
+
+    .section-title{
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:800;
+      margin-bottom:1rem;
+    }
+
+    .section-subtitle{
+      color:var(--text-secondary);
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* BUTTONS */
+
+    .btn-primary{
+      background:var(--teal);
+      transition:0.3s ease;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#0f766e;
+    }
+
+    .btn-secondary{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,0.03);
+    }
+
+    body.light-mode .btn-secondary{
+      background:#ffffff;
+    }
+
+    /* IMAGE HOVER */
+
+    .image-hover{
+      overflow:hidden;
+    }
+
+    .image-hover img{
+      transition:0.6s ease;
+    }
+
+    .image-hover:hover img{
+      transform:scale(1.08);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+ <!-- ===================================================== -->
+<!-- PREMIUM FLOATING NAVBAR -->
+<!-- ===================================================== -->
+
+<header id="navbar"
+        class="fixed top-5 left-1/2
+               -translate-x-1/2
+               z-50
+               w-full
+               transition-all duration-500">
+
+  <!-- CONTAINER -->
+  <div id="navbarContainer"
+       class="max-w-5xl mx-auto px-6
+              transition-all duration-500">
+
+
+
+
+    <!-- NAVBAR -->
+    <nav id="navbarInner"
+         class="bg-gray-900/85 backdrop-blur-xl
+                border border-white/10
+                rounded-2xl
+                px-8 py-4
+                flex items-center justify-between
+                transition-all duration-500">
+
+
+
+
+      <!-- ===================================================== -->
+      <!-- PROFILE BUTTON -->
+      <!-- ===================================================== -->
+
+      <a href="#home"
+         class="flex items-center gap-3 group shrink-0">
+
+        <!-- PROFILE IMAGE -->
+        <div class="w-11 h-11 rounded-full
+                    overflow-hidden
+                    border border-white/10
+                    group-hover:border-teal-400/40
+                    transition duration-300">
+
+          <!-- CHANGE IMAGE NAME ONLY -->
+          <img src="2profile.jpg"
+               alt="Hasibul Hossain"
+               class="w-full h-full object-cover">
+
+        </div>
+
+
+
+        <!-- NAME -->
+        <span class="font-semibold text-white
+                     hidden sm:block
+                     group-hover:text-teal-400
+                     transition duration-300">
+
+          Hasibul Hossain
+
+        </span>
+
+      </a>
+
+
+
+
+
+
+
+
+
+      <!-- ===================================================== -->
+      <!-- MENU -->
+      <!-- ===================================================== -->
+
+      <ul class="flex items-center
+                 gap-8 text-[16px] font-medium">
+
+
+
+
+        <li>
+          <a href="#home"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Home
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#about"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            About
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#education"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Education
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#skills"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Skills
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#experience"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Experience
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#projects"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Projects
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#contact"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Contact
+
+          </a>
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#resume"
+             class="text-white hover:text-teal-400
+                    transition duration-300">
+
+            Resume
+
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- ===================================================== -->
+<!-- NAVBAR SCROLL SCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+  let lastScroll = 0;
+
+  const navbar = document.getElementById("navbar");
+
+  const navbarInner = document.getElementById("navbarInner");
+
+
+
+  window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+
+
+    // =============================
+    // SCROLL DOWN → MINIMIZE
+    // =============================
+
+    if (currentScroll > lastScroll && currentScroll > 80) {
+
+      navbar.style.top = "-120px";
+
+    }
+
+
+
+    // =============================
+    // SCROLL UP → SHOW AGAIN
+    // =============================
+
+    else {
+
+      navbar.style.top = "20px";
+
+    }
+
+
+
+    // =============================
+    // SMALLER AFTER SCROLL
+    // =============================
+
+    if (currentScroll > 50) {
+
+      navbarInner.classList.remove("px-8", "py-4");
+
+      navbarInner.classList.add("px-6", "py-3");
+
+    }
+
+    else {
+
+      navbarInner.classList.remove("px-6", "py-3");
+
+      navbarInner.classList.add("px-8", "py-4");
+
+    }
+
+
+
+    lastScroll = currentScroll;
+
+  });
+
+</script>
+
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section id="home"
+           class="relative min-h-screen flex items-center overflow-hidden hero-bg">
+
+    <!-- Grid -->
+    <div class="absolute inset-0 hero-grid opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT -->
+
+        <div class="fade-up">
+
+          <!-- Intro -->
+
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full premium-card mb-8">
+
+            <div class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></div>
+
+            <span class="text-sm tracking-wide">
+              Pharmacist
+            </span>
+
+          </div>
+
+          <!-- Animated Name -->
+
+          <h1 id="typewriter-name"
+              class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight min-h-[100px]">
+          </h1>
+
+          <!-- Subtitle -->
+
+          <p class="mt-8 text-xl leading-relaxed text-slate-300 max-w-2xl">
+
+            Public Speaker |
+            Creative Communicator |
+            Photographer
+
+          </p>
+
+          <!-- Buttons -->
+
+          <div class="mt-10 flex flex-wrap gap-4">
+
+            <a href="#about"
+               class="btn-primary px-8 py-4 rounded-2xl text-white font-semibold shadow-lg">
+
+              Explore My Journey
+
+            </a>
+
+            <a href="#projects"
+               class="btn-secondary px-8 py-4 rounded-2xl font-semibold">
+
+              View Projects
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+
+        <div class="flex justify-center md:justify-end">
+
+          <div class="relative">
+
+            <!-- Glow -->
+
+            <div class="absolute inset-0 bg-teal-500/20 blur-3xl rounded-full scale-110"></div>
+
+            <!-- Border -->
+
+            <div class="absolute inset-0 rounded-full border border-teal-400/20"></div>
+
+            <!-- Image -->
+
+            <div class="relative w-80 h-80 md:w-[520px] md:h-[520px]
+                        rounded-full overflow-hidden
+                        border border-white/10
+                        floating-image
+                        shadow-2xl shadow-teal-500/20">
+
+              <img src="2profile.jpg"
+                   alt="Hasibul profile"
+                   class="w-full h-full object-cover scale-105">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= HIGHLIGHT STRIP ================= -->
+
+  <section class="relative z-20 -mt-20 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <!-- CARD -->
+
+        <div class="premium-card rounded-3xl p-8 text-center">
+
+          <h3 class="text-4xl font-black text-teal-400 mb-2">
+            50+
+          </h3>
+
+          <p class="text-slate-400">
+            Leadership Roles
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="premium-card rounded-3xl p-8 text-center">
+
+          <h3 class="text-4xl font-black text-teal-400 mb-2">
+            50+
+          </h3>
+
+          <p class="text-slate-400">
+            Public Speaking & Presentations
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="premium-card rounded-3xl p-8 text-center">
+
+          <h3 class="text-4xl font-black text-teal-400 mb-2">
+            15+
+          </h3>
+
+          <p class="text-slate-400">
+            Competitions & Events
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="premium-card rounded-3xl p-8 text-center">
+
+          <h3 class="text-4xl font-black text-teal-400 mb-2">
+            10+
+          </h3>
+
+          <p class="text-slate-400">
+            Creative & Academic Projects
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!-- ================= SCRIPT ================= -->
+  
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const sequences = [
+
+    "哈西比乌尔 霍赛因",
+    "ハシブル・ホサイン",
+    "하시불 호사인",
+    "حسيبول حسين",
+    "হাসিবুল হোসাইন",
+    "Хасибул Хоссаин",
+"हासिबुल हुसैन",
+"హసిబుల్ హొస్సేన్",
+
+    "H",
+    "Ha",
+    "Has",
+    "Hasi",
+    "Hasib",
+    "Hasibu",
+    "Hasibul",
+
+    "Hasibul H",
+    "Hasibul Ho",
+    "Hasibul Hos",
+    "Hasibul Hoss",
+    "Hasibul Hossa",
+    "Hasibul Hossai",
+    "Hasibul Hossain"
+
+  ];
+
+  const typewriter =
+  document.getElementById("typewriter-name");
+
+  let index = 0;
+
+  function typeSequence(){
+
+    if(index < sequences.length){
+
+      typewriter.innerHTML = `
+        <span class="typewriter-cursor drop-shadow-[0_0_30px_rgba(20,184,166,0.5)]">
+          ${sequences[index]}
+        </span>
+      `;
+
+      index++;
+
+      setTimeout(typeSequence, 100);
+
+    }
+
+  }
+
+  typeSequence();
+
+});
+
+
+
+
+  </script>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-28 relative overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute top-0 left-0 w-[400px] h-[400px] bg-teal-500/10 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 right-0 w-[350px] h-[350px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-20">
+
+      <span class="uppercase tracking-[5px] text-sm text-teal-400 font-semibold">
+        About Me
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-black mt-4 mb-6">
+        Pharmaceutical Sciences • Leadership • Communication
+      </h2>
+
+      <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed text-lg">
+        B.Pharm graduate with strong interests in pharmaceutical sciences,
+        laboratory excellence, leadership, public speaking, and creative communication.
+      </p>
+
+    </div>
+
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+
+      <!-- LEFT IMAGE -->
+      <div class="relative flex justify-center">
+
+        <!-- Decorative Border -->
+        <div class="absolute inset-0 rounded-[40px] border border-white/10 rotate-6 scale-105"></div>
+
+        <!-- Glow -->
+        <div class="absolute w-[320px] h-[320px] bg-teal-500/20 blur-3xl rounded-full"></div>
+
+        <!-- Image -->
+        <div class="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl shadow-teal-500/10 group">
+
+          <img src="profile.jpg"
+               alt="Hasibul profile"
+               class="w-full max-w-md object-cover transition duration-700 group-hover:scale-105">
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT CONTENT -->
+      <div>
+
+        <!-- Intro Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8">
+
+          <div class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></div>
+
+          <span class="text-sm tracking-wide text-gray-300">
+            Passion • Precision • Creativity
+          </span>
+
+        </div>
+
+
+        <!-- Main Heading -->
+        <h3 class="text-3xl md:text-4xl font-black leading-tight mb-8">
+
+          Bridging
+          <span class="text-teal-400">
+            Pharmaceutical Knowledge
+          </span>
+
+          with Leadership,
+          Communication &
+          Creative Thinking
+
+        </h3>
+
+
+        <!-- Paragraph -->
+        <p class="text-lg leading-relaxed text-gray-300 mb-8">
+
+          I am a B.Pharm graduate from the University of Asia Pacific with strong interests in pharmaceutical sciences, laboratory practices, scientific communication, leadership, and creative problem-solving.
+
+        </p>
+
+
+        <!-- Paragraph -->
+        <p class="text-lg leading-relaxed text-gray-300 mb-10">
+
+          Through academic projects, public speaking, competitions, organizational involvement, and extracurricular activities, I have developed practical experience in teamwork, presentation, laboratory handling, analytical thinking, and professional communication.
+
+        </p>
+
+
+
+        <!-- Info Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+
+
+          <!-- Card -->
+          <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 hover:border-teal-400/40 transition">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+              </div>
+
+              <div>
+
+                <p class="text-sm text-gray-400">
+                  Location
+                </p>
+
+                <h4 class="font-semibold">
+                  Dhaka, Bangladesh
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Card -->
+          <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 hover:border-teal-400/40 transition">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+              </div>
+
+              <div>
+
+                <p class="text-sm text-gray-400">
+                  Qualification
+                </p>
+
+                <h4 class="font-semibold">
+                  B.Pharm Graduate
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Card -->
+          <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 hover:border-teal-400/40 transition">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
+
+                <i class="fa-solid fa-flask"></i>
+
+              </div>
+
+              <div>
+
+                <p class="text-sm text-gray-400">
+                  Expertise
+                </p>
+
+                <h4 class="font-semibold">
+                  Laboratory Excellence
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Card -->
+          <div class="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-5 hover:border-teal-400/40 transition">
+
+            <div class="flex items-center gap-4">
+
+              <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-teal-400">
+
+                <i class="fa-solid fa-microphone"></i>
+
+              </div>
+
+              <div>
+
+                <p class="text-sm text-gray-400">
+                  Strength
+                </p>
+
+                <h4 class="font-semibold">
+                  Public Speaking
+                </h4>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+
+          <a href="#projects"
+             class="px-8 py-4 rounded-2xl bg-teal-600 hover:bg-teal-500 transition text-white font-semibold shadow-lg shadow-teal-500/20">
+
+            View Projects
+
+          </a>
+
+          <a href="#contact"
+             class="px-8 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition font-semibold backdrop-blur-md">
+
+            Contact Me
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section></section>
+
+<!--======================================= EDUCATION =================================-->
+<section id="education" class="py-24 bg-gray-800">
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+
+      <span class="uppercase tracking-[5px] text-sm text-teal-400 font-semibold">
+        Academic Journey
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-black mt-4 mb-5">
+        Education
+      </h2>
+
+      <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+        Building a strong foundation in pharmaceutical sciences, analytical thinking,
+        laboratory practices, and continuous academic excellence.
+      </p>
+
+    </div>
+
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+
+      <!-- CARD 1 -->
+      <div class="education-card bg-gray-900/90 border border-white/10 rounded-2xl p-6 hover:border-teal-400/40 transition duration-500 shadow-xl group">
+
+        <!-- Top -->
+        <div class="flex items-start justify-between mb-6">
+
+          <div class="w-12 h-12 rounded-2xl bg-teal-500/10
+                      flex items-center justify-center
+                      text-2xl text-teal-400">
+
+            🎓
+
+          </div>
+
+          <span class="text-xs uppercase tracking-[3px]
+                       text-teal-400 font-semibold">
+
+            Featured
+
+          </span>
+
+        </div>
+
+
+        <!-- Content -->
+        <h3 class="text-2xl font-black mb-2 group-hover:text-teal-400 transition">
+
+          Bachelor of Pharmacy (B.Pharm)
+
+        </h3>
+
+        <p class="text-lg text-gray-300 mb-5">
+          University of Asia Pacific
+        </p>
+
+
+        <!-- Info -->
+        <div class="flex flex-wrap items-center gap-5 text-sm text-gray-400 mb-6">
+
+          <span>
+            <i class="fa-regular fa-calendar mr-2"></i>
+            2022 – 2026
+          </span>
+
+          <span>
+            <i class="fa-solid fa-location-dot mr-2"></i>
+            Bangladesh
+          </span>
+
+        </div>
+
+
+        <!-- Description -->
+        <p class="text-gray-400 leading-relaxed">
+
+          Comprehensive academic training in pharmaceutical sciences including
+          pharmaceutics, pharmaceutical analysis, laboratory practices,
+          quality control, and scientific documentation.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 2 -->
+      <div class="education-card bg-gray-900/90 border border-white/10 rounded-2xl p-6 hover:border-sky-400/40 transition duration-500 shadow-xl group">
+
+        <!-- Top -->
+        <div class="flex items-start justify-between mb-6">
+
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10
+                      flex items-center justify-center
+                      text-2xl text-sky-400">
+
+            📘
+
+          </div>
+
+          <span class="text-xs uppercase tracking-[3px]
+                       text-sky-400 font-semibold">
+
+            Higher Secondary
+
+          </span>
+
+        </div>
+
+
+        <!-- Content -->
+        <h3 class="text-2xl font-black mb-2 group-hover:text-sky-400 transition">
+
+          HSC
+
+        </h3>
+
+        <p class="text-lg text-gray-300 mb-5">
+          BAF Shaheen College
+        </p>
+
+
+        <!-- Info -->
+        <div class="flex flex-wrap items-center gap-5 text-sm text-gray-400 mb-6">
+
+          <span>
+            <i class="fa-regular fa-calendar mr-2"></i>
+            2018 – 2020
+          </span>
+
+          <span>
+            <i class="fa-solid fa-star mr-2"></i>
+            GPA 5.00
+          </span>
+
+        </div>
+
+
+        <!-- Description -->
+        <p class="text-gray-400 leading-relaxed">
+
+          Completed higher secondary education with science background,
+          focusing on biology, chemistry, and physics while maintaining
+          excellent academic performance.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 3 -->
+      <div class="education-card bg-gray-900/90 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition duration-500 shadow-xl group">
+
+        <!-- Top -->
+        <div class="flex items-start justify-between mb-6">
+
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10
+                      flex items-center justify-center
+                      text-2xl text-purple-400">
+
+            🏫
+
+          </div>
+
+          <span class="text-xs uppercase tracking-[3px]
+                       text-purple-400 font-semibold">
+
+            Secondary
+
+          </span>
+
+        </div>
+
+
+        <!-- Content -->
+        <h3 class="text-2xl font-black mb-2 group-hover:text-purple-400 transition">
+
+          SSC
+
+        </h3>
+
+        <p class="text-lg text-gray-300 mb-5">
+          Motijheel Govt. Boys’ High School
+        </p>
+
+
+        <!-- Info -->
+        <div class="flex flex-wrap items-center gap-5 text-sm text-gray-400 mb-6">
+
+          <span>
+            <i class="fa-regular fa-calendar mr-2"></i>
+            2016 – 2018
+          </span>
+
+          <span>
+            <i class="fa-solid fa-star mr-2"></i>
+            GPA 5.00
+          </span>
+
+        </div>
+
+
+        <!-- Description -->
+        <p class="text-gray-400 leading-relaxed">
+
+          Developed a strong academic foundation while actively participating
+          in leadership, organizational, and extracurricular activities.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- CARD 4 -->
+      <div class="education-card bg-gray-900/90 border border-white/10 rounded-2xl p-6 hover:border-orange-400/40 transition duration-500 shadow-xl group">
+
+        <!-- Top -->
+        <div class="flex items-start justify-between mb-6">
+
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/10
+                      flex items-center justify-center
+                      text-2xl text-orange-400">
+
+            📚
+
+          </div>
+
+          <span class="text-xs uppercase tracking-[3px]
+                       text-orange-400 font-semibold">
+
+            Junior Education
+
+          </span>
+
+        </div>
+
+
+        <!-- Content -->
+        <h3 class="text-2xl font-black mb-2 group-hover:text-orange-400 transition">
+
+          JSC
+
+        </h3>
+
+        <p class="text-lg text-gray-300 mb-5">
+          Motijheel Govt. Boys’ High School
+        </p>
+
+
+        <!-- Info -->
+        <div class="flex flex-wrap items-center gap-5 text-sm text-gray-400 mb-6">
+
+          <span>
+            <i class="fa-regular fa-calendar mr-2"></i>
+            2013 – 2015
+          </span>
+
+          <span>
+            <i class="fa-solid fa-star mr-2"></i>
+            GPA 5.00
+          </span>
+
+        </div>
+
+
+        <!-- Description -->
+        <p class="text-gray-400 leading-relaxed">
+
+          Built early academic discipline and communication skills while
+          participating in creative and leadership-focused activities.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- EXPERIENCE & ACHIEVEMENTS SECTION -->
+<!-- ===================================================== -->
+
+<section id="experience"
+         class="py-24 bg-gray-950 overflow-hidden">
+
+  <!-- MAIN CONTAINER -->
+  <div class="max-w-5xl mx-auto px-6">
+
+
+
+
+    <!-- ===================================================== -->
+    <!-- MAIN HEADER -->
+    <!-- ===================================================== -->
+
+    <div class="text-center mb-20">
+
+      <span class="uppercase tracking-[4px]
+                   text-sm text-teal-400 font-semibold">
+
+        Experience & Achievements
+
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-5">
+
+        Involvement & Activities
+
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+
+        Leadership roles, academic participation,
+        conferences, public speaking,
+        competitions, and creative achievements.
+
+      </p>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- ===================================================== -->
+    <!-- SECTION 1 -->
+    <!-- LEADERSHIP & ORGANIZING -->
+    <!-- ===================================================== -->
+
+    <div class="mb-24">
+
+      <!-- SECTION HEADER -->
+      <div class="mb-10">
+
+        <span class="uppercase tracking-[4px]
+                     text-sm text-teal-400 font-semibold">
+
+          Leadership & Organizing
+
+        </span>
+
+        <h3 class="text-3xl font-bold mt-3 mb-3">
+
+          Positions & Responsibilities
+
+        </h3>
+
+        <p class="text-gray-400 max-w-2xl">
+
+          Leadership roles, organizing activities,
+          communication, and public speaking involvement.
+
+        </p>
+
+      </div>
+
+
+
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-teal-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-teal-500/10
+                        flex items-center justify-center
+                        text-lg text-teal-400">
+
+              👑
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            President — Photophilic
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Fall 2025
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              2025 – Present
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-sky-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-sky-500/10
+                        flex items-center justify-center
+                        text-lg text-sky-400">
+
+              📸
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            Organizer — Expression 7
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Photophilic
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              2025
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-purple-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-purple-500/10
+                        flex items-center justify-center
+                        text-lg text-purple-400">
+
+              🖼️
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            Organizer — Intervision 1.0
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Photography Exhibition
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              2023
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-orange-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-orange-500/10
+                        flex items-center justify-center
+                        text-lg text-orange-400">
+
+              🏛️
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            President — Interact Club
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Rotary Club of Rajdhani Dhaka
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              2014 – 2015
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-pink-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-pink-500/10
+                        flex items-center justify-center
+                        text-lg text-pink-400">
+
+              🌍
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            Student Ambassador
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Rotary International
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              2018 – Present
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-6 py-4
+                    hover:border-cyan-400/30
+                    transition duration-500">
+
+          <div class="flex items-start justify-between mb-4">
+
+            <div class="w-10 h-10 rounded-xl
+                        bg-cyan-500/10
+                        flex items-center justify-center
+                        text-lg text-cyan-400">
+
+              🎙️
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square text-gray-500"></i>
+
+          </div>
+
+          <h4 class="text-lg font-bold mb-1">
+
+            Public Speaking
+
+          </h4>
+
+          <p class="text-gray-400 mb-3 text-sm">
+
+            Presentations, competitions & academic speaking
+
+          </p>
+
+          <div class="flex items-center gap-2 text-gray-500 text-sm">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <span>
+              Ongoing
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+   <!-- ===================================================== -->
+<!-- SECTION 2 -->
+<!-- ACADEMIC PARTICIPATION -->
+<!-- ===================================================== -->
+
+<div class="mb-24">
+
+  <!-- HEADER -->
+  <div class="mb-12">
+
+    <span class="uppercase tracking-[4px]
+                 text-sm text-blue-400 font-semibold">
+
+      Academic Participation
+
+    </span>
+
+    <h3 class="text-3xl font-bold mt-3 mb-3">
+
+      Conferences & Seminars
+
+    </h3>
+
+    <p class="text-gray-400 max-w-2xl">
+
+      Pharmaceutical conferences, seminars,
+      volunteer activities, and academic participation.
+
+    </p>
+
+  </div>
+
+
+
+
+
+
+
+
+  <!-- GRID -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+
+
+
+
+
+
+    <!-- ================================================= -->
+    <!-- CARD -->
+    <!-- ================================================= -->
+
+    <div class="relative overflow-hidden
+
+                bg-gray-900 border border-blue-400/20
+
+                rounded-3xl
+
+                px-6 py-5
+
+                hover:border-blue-400/50
+
+                hover:-translate-y-1
+
+                transition duration-500">
+
+
+
+      <!-- Glow -->
+      <div class="absolute top-0 right-0
+                  w-32 h-32
+                  bg-blue-500/10
+                  blur-3xl rounded-full">
+
+      </div>
+
+
+
+
+
+      <!-- TOP -->
+      <div class="relative z-10 flex items-start
+                  justify-between mb-5">
+
+        <!-- LEFT -->
+        <div class="flex items-center gap-4">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl
+                      bg-blue-500/10
+                      flex items-center justify-center
+                      text-2xl text-blue-400">
+
+            🎓
+
+          </div>
+
+
+
+          <!-- TITLE -->
+          <div>
+
+            <h4 class="text-xl font-bold mb-1">
+
+              ICPHS 2024
+
+            </h4>
+
+            <p class="text-blue-400 text-sm font-medium">
+
+              Volunteer
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- YEAR -->
+        <span class="text-xs uppercase tracking-[2px]
+                     bg-blue-500/10 text-blue-300
+                     px-3 py-2 rounded-xl">
+
+          2024
+
+        </span>
+
+      </div>
+
+
+
+
+
+      <!-- CONTENT -->
+      <p class="relative z-10
+                text-gray-400 text-sm
+                leading-relaxed mb-5">
+
+        Volunteered at the International Conference on
+        Pharmaceutical and Health Sciences hosted by
+        the University of Asia Pacific.
+
+      </p>
+
+
+
+
+
+      <!-- BOTTOM -->
+      <div class="relative z-10 flex items-center gap-3">
+
+        <span class="text-xs
+                     bg-white/5
+                     border border-white/10
+                     px-3 py-2 rounded-xl
+                     text-gray-300">
+
+          University of Asia Pacific
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================================================= -->
+    <!-- CARD -->
+    <!-- ================================================= -->
+
+    <div class="relative overflow-hidden
+
+                bg-gray-900 border border-sky-400/20
+
+                rounded-3xl
+
+                px-6 py-5
+
+                hover:border-sky-400/50
+
+                hover:-translate-y-1
+
+                transition duration-500">
+
+
+
+      <!-- Glow -->
+      <div class="absolute top-0 right-0
+                  w-32 h-32
+                  bg-sky-500/10
+                  blur-3xl rounded-full">
+
+      </div>
+
+
+
+
+
+      <!-- TOP -->
+      <div class="relative z-10 flex items-start
+                  justify-between mb-5">
+
+        <!-- LEFT -->
+        <div class="flex items-center gap-4">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl
+                      bg-sky-500/10
+                      flex items-center justify-center
+                      text-2xl text-sky-400">
+
+            💊
+
+          </div>
+
+
+
+          <!-- TITLE -->
+          <div>
+
+            <h4 class="text-xl font-bold mb-1">
+
+              Pharma Summit 2024
+
+            </h4>
+
+            <p class="text-sky-400 text-sm font-medium">
+
+              Participant
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- YEAR -->
+        <span class="text-xs uppercase tracking-[2px]
+                     bg-sky-500/10 text-sky-300
+                     px-3 py-2 rounded-xl">
+
+          2024
+
+        </span>
+
+      </div>
+
+
+
+
+
+      <!-- CONTENT -->
+      <p class="relative z-10
+                text-gray-400 text-sm
+                leading-relaxed mb-5">
+
+        Participated in pharmaceutical innovation
+        and healthcare development focused
+        discussions and sessions.
+
+      </p>
+
+
+
+
+
+      <!-- BOTTOM -->
+      <div class="relative z-10 flex items-center gap-3">
+
+        <span class="text-xs
+                     bg-white/5
+                     border border-white/10
+                     px-3 py-2 rounded-xl
+                     text-gray-300">
+
+          Pharmaceutical Event
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================================================= -->
+    <!-- CARD -->
+    <!-- ================================================= -->
+
+    <div class="relative overflow-hidden
+
+                bg-gray-900 border border-purple-400/20
+
+                rounded-3xl
+
+                px-6 py-5
+
+                hover:border-purple-400/50
+
+                hover:-translate-y-1
+
+                transition duration-500">
+
+
+
+      <!-- Glow -->
+      <div class="absolute top-0 right-0
+                  w-32 h-32
+                  bg-purple-500/10
+                  blur-3xl rounded-full">
+
+      </div>
+
+
+
+
+
+      <!-- TOP -->
+      <div class="relative z-10 flex items-start
+                  justify-between mb-5">
+
+        <!-- LEFT -->
+        <div class="flex items-center gap-4">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl
+                      bg-purple-500/10
+                      flex items-center justify-center
+                      text-2xl text-purple-400">
+
+            📈
+
+          </div>
+
+
+
+          <!-- TITLE -->
+          <div>
+
+            <h4 class="text-xl font-bold mb-1">
+
+              Pharma Marketing Seminar
+
+            </h4>
+
+            <p class="text-purple-400 text-sm font-medium">
+
+              Academic Seminar
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- YEAR -->
+        <span class="text-xs uppercase tracking-[2px]
+                     bg-purple-500/10 text-purple-300
+                     px-3 py-2 rounded-xl">
+
+          Seminar
+
+        </span>
+
+      </div>
+
+
+
+
+
+      <!-- CONTENT -->
+      <p class="relative z-10
+                text-gray-400 text-sm
+                leading-relaxed mb-5">
+
+        Participated in pharmaceutical marketing,
+        branding, and healthcare communication sessions.
+
+      </p>
+
+
+
+
+
+      <!-- BOTTOM -->
+      <div class="relative z-10 flex items-center gap-3">
+
+        <span class="text-xs
+                     bg-white/5
+                     border border-white/10
+                     px-3 py-2 rounded-xl
+                     text-gray-300">
+
+          Marketing & Branding
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================================================= -->
+    <!-- CARD -->
+    <!-- ================================================= -->
+
+    <div class="relative overflow-hidden
+
+                bg-gray-900 border border-orange-400/20
+
+                rounded-3xl
+
+                px-6 py-5
+
+                hover:border-orange-400/50
+
+                hover:-translate-y-1
+
+                transition duration-500">
+
+
+
+      <!-- Glow -->
+      <div class="absolute top-0 right-0
+                  w-32 h-32
+                  bg-orange-500/10
+                  blur-3xl rounded-full">
+
+      </div>
+
+
+
+
+
+      <!-- TOP -->
+      <div class="relative z-10 flex items-start
+                  justify-between mb-5">
+
+        <!-- LEFT -->
+        <div class="flex items-center gap-4">
+
+          <!-- ICON -->
+          <div class="w-14 h-14 rounded-2xl
+                      bg-orange-500/10
+                      flex items-center justify-center
+                      text-2xl text-orange-400">
+
+            🩺
+
+          </div>
+
+
+
+          <!-- TITLE -->
+          <div>
+
+            <h4 class="text-xl font-bold mb-1">
+
+              Clinical Pharmacist Seminar
+
+            </h4>
+
+            <p class="text-orange-400 text-sm font-medium">
+
+              Clinical Discussion
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- YEAR -->
+        <span class="text-xs uppercase tracking-[2px]
+                     bg-orange-500/10 text-orange-300
+                     px-3 py-2 rounded-xl">
+
+          Seminar
+
+        </span>
+
+      </div>
+
+
+
+
+
+      <!-- CONTENT -->
+      <p class="relative z-10
+                text-gray-400 text-sm
+                leading-relaxed mb-5">
+
+        Participated in seminar discussions related
+        to clinical pharmacy practices and
+        healthcare communication.
+
+      </p>
+
+
+
+
+
+      <!-- BOTTOM -->
+      <div class="relative z-10 flex items-center gap-3">
+
+        <span class="text-xs
+                     bg-white/5
+                     border border-white/10
+                     px-3 py-2 rounded-xl
+                     text-gray-300">
+
+          Clinical Pharmacy
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- ===================================================== -->
+    <!-- SECTION 3 -->
+    <!-- ACADEMIC SKILLS -->
+    <!-- ===================================================== -->
+
+    <!-- ===================================================== -->
+<!-- SECTION 4 -->
+<!-- ACHIEVEMENTS -->
+<!-- ===================================================== -->
+
+<div>
+
+  <!-- HEADER -->
+  <div class="mb-10">
+
+    <span class="uppercase tracking-[4px]
+                 text-sm text-yellow-400 font-semibold">
+
+      Achievements
+
+    </span>
+
+    <h3 class="text-3xl font-bold mt-3 mb-3">
+
+      Competitions & Recognition
+
+    </h3>
+
+    <p class="text-gray-400 max-w-2xl">
+
+      Competitions, photography achievements,
+      exhibitions, and creative recognitions.
+
+    </p>
+
+  </div>
+
+
+
+
+  <!-- IMAGE GRID -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-teal-400/30
+                transition duration-500">
+
+      <img src="pharma-pitch.jpg"
+           alt="Pharma Pitch Off"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Winner — Pharma Pitch Off
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Winner of the Pharma Marketing Competition “Pharma Pitch Off” organized by ECDC.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-sky-400/30
+                transition duration-500">
+
+      <img src="dreamscape.jpg"
+           alt="Dhaka Dreamscape"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Winner — Dhaka Dreamscape
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Winner of Photo Story Hunt S01 “Dhaka Dreamscape”.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-cyan-400/30
+                transition duration-500">
+
+      <img src="best-speaker.jpg"
+           alt="Best Speaker"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Best Speaker — Department of Pharmacy
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Recognized for consistent excellence in presentations,
+          public speaking, academic communication,
+          and competition-based speaking performances.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-purple-400/30
+                transition duration-500">
+
+      <img src="expression7.jpg"
+           alt="Expression 7"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Winner — Expression 7
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Winner of Expression 7 organized by Photophilic.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-orange-400/30
+                transition duration-500">
+
+      <img src="intervision.jpg"
+           alt="Intervision"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Special Mention — Intervision 1.0
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Received special mention in the intra university photography exhibition.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- CARD -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-2xl overflow-hidden
+                hover:border-pink-400/30
+                transition duration-500">
+
+      <img src="expression6.jpg"
+           alt="Expression VI"
+           class="w-full h-36 object-cover">
+
+      <div class="px-4 py-3">
+
+        <h4 class="text-base font-bold mb-2">
+
+          Photo Exhibited — Expression VI
+
+        </h4>
+
+        <p class="text-gray-400 text-sm leading-relaxed">
+
+          Photography work exhibited in Expression VI organized by Photophilic.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- SKILLS SECTION -->
+<!-- ===================================================== -->
+
+<section id="skills" class="py-24 bg-gray-950 overflow-hidden">
+
+  <!-- CONTAINER -->
+  <div class="max-w-5xl mx-auto px-6">
+
+
+
+
+    <!-- ===================================================== -->
+    <!-- SECTION HEADER -->
+    <!-- ===================================================== -->
+
+    <div class="text-center mb-20">
+
+      <span class="uppercase tracking-[4px]
+                   text-sm text-teal-400 font-semibold">
+
+        Skills & Competencies
+
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-5">
+
+        Professional Skillset
+
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+
+        Technical pharmaceutical expertise combined with
+        communication, leadership, and interpersonal abilities.
+
+      </p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ===================================================== -->
+    <!-- SOFT SKILLS -->
+    <!-- ===================================================== -->
+
+    <div class="mb-24">
+
+      <!-- HEADER -->
+      <div class="mb-10">
+
+        <span class="uppercase tracking-[4px]
+                     text-sm text-pink-400 font-semibold">
+
+          Soft Skills
+
+        </span>
+
+        <h3 class="text-3xl font-bold mt-3 mb-3">
+
+          Communication & Leadership
+
+        </h3>
+
+        <p class="text-gray-400 max-w-2xl">
+
+          Interpersonal, leadership, presentation,
+          and collaborative competencies developed
+          through academic and extracurricular activities.
+
+        </p>
+
+      </div>
+
+
+
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-pink-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-pink-500/10
+                      flex items-center justify-center
+                      text-pink-400 mb-4">
+
+            🎙️
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Public Speaking
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Experienced in presentations, competitions,
+            academic speaking, and audience engagement.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-cyan-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-cyan-500/10
+                      flex items-center justify-center
+                      text-cyan-400 mb-4">
+
+            👥
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Leadership
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Experienced in leading teams, organizing events,
+            and managing collaborative responsibilities.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-orange-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-orange-500/10
+                      flex items-center justify-center
+                      text-orange-400 mb-4">
+
+            💬
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Communication Skills
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Strong verbal and interpersonal communication
+            skills across academic and professional settings.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-teal-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-teal-500/10
+                      flex items-center justify-center
+                      text-teal-400 mb-4">
+
+            🤝
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Team Collaboration
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Skilled in teamwork, event coordination,
+            and collaborative academic activities.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-purple-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-purple-500/10
+                      flex items-center justify-center
+                      text-purple-400 mb-4">
+
+            🧠
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Creative Thinking
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Creative approach toward photography,
+            presentations, storytelling, and visual concepts.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-yellow-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-yellow-500/10
+                      flex items-center justify-center
+                      text-yellow-400 mb-4">
+
+            ⚡
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Adaptability
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Able to adapt efficiently in academic,
+            organizational, and professional environments.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- ===================================================== -->
+    <!-- HARD SKILLS -->
+    <!-- ===================================================== -->
+
+    <div>
+
+      <!-- HEADER -->
+      <div class="mb-10">
+
+        <span class="uppercase tracking-[4px]
+                     text-sm text-blue-400 font-semibold">
+
+          Hard Skills
+
+        </span>
+
+        <h3 class="text-3xl font-bold mt-3 mb-3">
+
+          Technical & Pharmaceutical Skills
+
+        </h3>
+
+        <p class="text-gray-400 max-w-2xl">
+
+          Pharmaceutical laboratory practices,
+          documentation, analytical techniques,
+          and technical competencies.
+
+        </p>
+
+      </div>
+
+
+
+
+      <!-- GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-teal-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-teal-500/10
+                      flex items-center justify-center
+                      text-teal-400 mb-4">
+
+            ⚗️
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Laboratory Practices
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Experienced in laboratory handling,
+            analytical procedures, and pharmaceutical practices.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-cyan-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-cyan-500/10
+                      flex items-center justify-center
+                      text-cyan-400 mb-4">
+
+            📄
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Scientific Documentation
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Skilled in academic writing,
+            pharmaceutical reporting, and documentation.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-purple-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-purple-500/10
+                      flex items-center justify-center
+                      text-purple-400 mb-4">
+
+            🧪
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Quality Control
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Familiar with pharmaceutical quality control
+            procedures and formulation-related practices.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-orange-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-orange-500/10
+                      flex items-center justify-center
+                      text-orange-400 mb-4">
+
+            📊
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Presentation Design
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Skilled in academic presentation creation,
+            visual organization, and content structuring.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-pink-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-pink-500/10
+                      flex items-center justify-center
+                      text-pink-400 mb-4">
+
+            📷
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Photography
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Experienced in photography composition,
+            visual storytelling, and creative exhibition work.
+
+          </p>
+
+        </div>
+
+
+
+
+
+
+        <!-- CARD -->
+        <div class="bg-gray-900 border border-white/10
+                    rounded-2xl px-5 py-4
+                    hover:border-yellow-400/30
+                    transition duration-500">
+
+          <div class="w-10 h-10 rounded-xl
+                      bg-yellow-500/10
+                      flex items-center justify-center
+                      text-yellow-400 mb-4">
+
+            💻
+
+          </div>
+
+          <h4 class="text-base font-bold mb-2">
+
+            Digital Tools
+
+          </h4>
+
+          <p class="text-gray-400 text-sm leading-relaxed">
+
+            Familiar with presentation software,
+            academic tools, and creative digital platforms.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- RESUME SECTION -->
+<!-- ===================================================== -->
+
+<section id="resume"
+         class="py-24
+                bg-gradient-to-b
+                from-[#020617]
+                via-[#071126]
+                to-[#020617]
+                overflow-hidden">
+
+
+
+
+  <!-- CONTAINER -->
+  <div class="max-w-5xl mx-auto px-6">
+
+
+
+
+    <!-- ================================================= -->
+    <!-- RESUME CARD -->
+    <!-- ================================================= -->
+
+    <div class="relative overflow-hidden
+
+                bg-gray-900/90
+                border border-white/10
+
+                rounded-[34px]
+
+                px-8 py-10
+
+                flex flex-col lg:flex-row
+                items-center justify-between
+                gap-10">
+
+
+
+
+      <!-- GLOW -->
+      <div class="absolute top-0 right-0
+                  w-72 h-72
+                  bg-teal-500/10
+                  blur-3xl rounded-full">
+
+      </div>
+
+
+
+
+
+
+
+      <!-- LEFT -->
+      <div class="relative z-10 max-w-2xl">
+
+        <span class="uppercase tracking-[4px]
+                     text-sm text-teal-400
+                     font-semibold">
+
+          Resume & Portfolio
+
+        </span>
+
+
+
+
+
+        <h2 class="text-4xl md:text-5xl
+                   font-bold
+                   mt-4 mb-5 leading-tight">
+
+          Professional Resume
+
+        </h2>
+
+
+
+
+
+        <p class="text-gray-400
+                  text-lg leading-relaxed">
+
+          Explore my academic background,
+          pharmaceutical expertise,
+          leadership experiences,
+          extracurricular involvement,
+          creative achievements,
+          and project portfolio through
+          my complete professional resume.
+
+        </p>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <!-- RIGHT -->
+      <div class="relative z-10
+                  flex flex-col sm:flex-row
+                  gap-4">
+
+
+
+
+        <!-- DOWNLOAD -->
+        <a href="resume.pdf"
+           download
+
+           class="px-8 py-4 rounded-2xl
+
+                  bg-teal-500 text-black
+
+                  font-semibold
+
+                  hover:bg-teal-400
+
+                  transition duration-300
+
+                  flex items-center justify-center
+                  gap-3">
+
+          <i class="fa-solid fa-download"></i>
+
+          Download
+
+        </a>
+
+
+
+
+
+
+        <!-- VIEW ONLINE -->
+        <a href="resume.pdf"
+           target="_blank"
+
+           class="px-8 py-4 rounded-2xl
+
+                  bg-white/5
+                  border border-white/10
+
+                  hover:bg-white/10
+
+                  transition duration-300
+
+                  font-semibold
+
+                  flex items-center justify-center
+                  gap-3">
+
+          <i class="fa-solid fa-eye"></i>
+
+          View Online
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ===================================================== -->
+<!-- GET IN TOUCH -->
+<!-- ===================================================== -->
+
+<section id="contact"
+         class="py-20 bg-gray-950 overflow-hidden">
+
+  <!-- CONTAINER -->
+  <div class="max-w-5xl mx-auto px-6">
+
+
+
+
+    <!-- HEADER -->
+    <div class="text-center mb-12">
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+
+        Get In Touch
+
+      </h2>
+
+      <p class="text-gray-400">
+
+        Have a question or want to work together?
+        Feel free to reach out!
+
+      </p>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- CONTACT BOX -->
+    <div class="bg-gray-900 border border-white/10
+                rounded-[34px]
+                px-6 py-14
+                text-center">
+
+
+
+
+      <!-- TEXT -->
+      <p class="text-lg md:text-xl leading-relaxed
+                text-gray-100 max-w-3xl mx-auto mb-10">
+
+        I'm always eager to explore new opportunities,
+        collaborations, and meaningful conversations about
+        pharmaceutical sciences, healthcare innovation,
+        and technology-driven solutions.
+
+      </p>
+
+
+
+
+
+
+      <!-- SOCIAL ICONS -->
+      <div class="flex flex-wrap items-center
+                  justify-center gap-5 mb-10">
+
+
+
+
+        <!-- PHONE -->
+        <a href="tel:+8801748630451"
+           class="w-16 h-16 rounded-2xl
+                  bg-black/40
+                  flex items-center justify-center
+                  text-2xl
+                  hover:bg-teal-500 hover:text-black
+                  transition duration-300">
+
+          <i class="fa-solid fa-phone"></i>
+
+        </a>
+
+
+
+
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/8801748630451"
+           target="_blank"
+           class="w-16 h-16 rounded-2xl
+                  bg-black/40
+                  flex items-center justify-center
+                  text-2xl
+                  hover:bg-green-500 hover:text-black
+                  transition duration-300">
+
+          <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+
+
+
+
+        <!-- FACEBOOK -->
+        <a href="https://facebook.com/Hasib.0429"
+   target="_blank"
+   class="w-16 h-16 rounded-2xl
+          bg-black/40
+          flex items-center justify-center
+          text-2xl
+          hover:bg-blue-500 hover:text-black
+          transition duration-300">
+
+  <i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+
+
+
+
+        <!-- LINKEDIN -->
+        <a href="www.linkedin.com/in/hasib2904"
+           class="w-16 h-16 rounded-2xl
+                  bg-black/40
+                  flex items-center justify-center
+                  text-2xl
+                  hover:bg-sky-500 hover:text-black
+                  transition duration-300">
+
+          <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+
+
+
+
+        <!-- GITHUB -->
+        <a href="https://github.com/hasib2904"
+           class="w-16 h-16 rounded-2xl
+                  bg-black/40
+                  flex items-center justify-center
+                  text-2xl
+                  hover:bg-white hover:text-black
+                  transition duration-300">
+
+          <i class="fa-brands fa-github"></i>
+
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+      <!-- LOCATION -->
+      <div class="flex items-center justify-center gap-3
+                  text-lg text-white">
+
+        <i class="fa-solid fa-location-dot text-gray-300"></i>
+
+        <span>
+          Dhaka, Bangladesh
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <div class="pt-14 text-center">
+
+      <div class="w-full h-px bg-white/10 mb-6"></div>
+
+      <h3 class="text-xl font-bold mb-2">
+
+        Hasibul Hossain
+
+      </h3>
+
+      <p class="text-gray-500 mb-4 text-sm">
+
+        B.Pharm Graduate • Public Speaker • Creative Enthusiast
+
+      </p>
+
+      <p class="text-gray-600 text-sm">
+
+        © 2026 Hasibul Hossain. All rights reserved.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- THEME BUTTON -->
+<button id="themeToggle"
+class="fixed bottom-6 right-6 z-[9999]
+w-14 h-14 rounded-full
+bg-gray-900 border border-white/10
+text-yellow-400 text-xl
+flex items-center justify-center
+shadow-2xl transition duration-300">
+
+🌙
+
+</button>
+
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const button = document.getElementById("themeToggle");
+
+
+
+  // LOAD SAVED THEME
+  if(localStorage.getItem("theme") === "light") {
+
+    document.body.classList.add("light");
+
+    button.innerHTML = "☀️";
+
+  }
+
+
+
+  // CLICK
+  button.addEventListener("click", function () {
+
+    document.body.classList.toggle("light");
+
+
+
+    if(document.body.classList.contains("light")) {
+
+      localStorage.setItem("theme", "light");
+
+      button.innerHTML = "☀️";
+
+    }
+
+    else {
+
+      localStorage.setItem("theme", "dark");
+
+      button.innerHTML = "🌙";
+
+    }
+
+  });
+
+});
+
+</script>
+
+
+
+
+
+<style>
+
+/* LIGHT BODY */
+body.light {
+
+  background: #f3f4f6 !important;
+
+  color: #111827 !important;
+
+}
+
+
+
+/* LIGHT SECTION */
+body.light section {
+
+  background: #f3f4f6 !important;
+
+}
+
+
+
+/* LIGHT CARDS */
+body.light .bg-gray-900 {
+
+  background: rgba(255,255,255,0.95) !important;
+
+  border-color: rgba(0,0,0,0.08) !important;
+
+}
+
+
+
+/* LIGHT BLACK */
+body.light .bg-black {
+
+  background: #f3f4f6 !important;
+
+}
+
+
+
+/* LIGHT TEXT */
+body.light .text-white {
+
+  color: #111827 !important;
+
+}
+
+
+
+/* LIGHT PARAGRAPH */
+body.light .text-gray-300,
+body.light .text-gray-400,
+body.light .text-gray-500,
+body.light .text-gray-600 {
+
+  color: #111827 !important;
+
+}
+
+
+/* LIGHT NAV */
+body.light nav {
+
+  background: rgba(255,255,255,0.9) !important;
+
+}
+
+
+
+/* BUTTON LIGHT */
+body.light #themeToggle {
+
+  background: white !important;
+
+  border-color: rgba(0,0,0,0.08) !important;
+
+}
+/* ====================================== */
+/* EDUCATION CARDS FIX */
+/* ====================================== */
+
+body.light .education-card {
+
+  background: rgba(255,255,255,0.95) !important;
+
+  border-color: rgba(0,0,0,0.08) !important;
+
+}
+
+
+
+/* ====================================== */
+/* GET IN TOUCH TEXT FIX */
+/* ====================================== */
+
+body.light #contact h1,
+body.light #contact h2,
+body.light #contact h3,
+body.light #contact h4,
+body.light #contact p,
+body.light #contact span {
+
+  color: #111827 !important;
+
+}
+
+
+
+/* ====================================== */
+/* CONTACT BOX */
+/* ====================================== */
+
+body.light #contact .bg-gray-900 {
+
+  background: rgba(255,255,255,0.95) !important;
+
+}
+
+
+
+/* ====================================== */
+/* CONTACT ICON BOX */
+/* ====================================== */
+
+body.light #contact .bg-black\/40 {
+
+  background: rgba(0,0,0,0.05) !important;
+
+}
+/* ====================================== */
+/* RESUME SECTION FIX */
+/* ====================================== */
+
+body.light #resume h2 {
+
+  color: #111827 !important;
+
+}
+
+
+
+body.light #resume p {
+
+  color: #374151 !important;
+
+}
+
+
+
+/* Small teal heading */
+body.light #resume span {
+
+  color: #14b8a6 !important;
+
+}
+
+
+
+/* View Online button */
+body.light #resume a.bg-white\/5 {
+
+  background: rgba(0,0,0,0.04) !important;
+
+  border-color: rgba(0,0,0,0.08) !important;
+
+  color: #111827 !important;
+
+}
+
+
+
+/* Resume card background */
+body.light #resume .bg-gray-900\/90 {
+
+  background: rgba(255,255,255,0.92) !important;
+
+}
+
+
+
+/* Glow fix */
+body.light #resume .bg-teal-500\/10 {
+
+  background: rgba(20,184,166,0.08) !important;
+
+}
+</style>
+</body>
+</html>
